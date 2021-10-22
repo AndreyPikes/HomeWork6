@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WorkerDatabase.Controls.DBControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkerDatabase.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="214" d:DesignWidth="300">
+    <Grid>
+        <TextBox Text="{Binding Worker.Name}" Margin="88,3,0,0" TextWrapping="Wrap" Height="18" VerticalAlignment="Top"/>
+        <Label Content="Имя" Margin="0,0,175,0" Height="24" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Worker.Age}" Margin="88,32,0,0" TextWrapping="Wrap" Height="18" VerticalAlignment="Top"/>
+        <Label Content="Возраст" Margin="0,29,175,0" Height="24" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Worker.Position}" Margin="88,66,0,0" TextWrapping="Wrap" Height="18" VerticalAlignment="Top"/>
+        <Label Content="Должность" Margin="0,63,175,0" Height="24" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Worker.Comment}" Margin="88,100,0,0" TextWrapping="Wrap" Height="60" VerticalAlignment="Top"/>
+        <Label Content="Комментарий" Margin="0,97,175,0" Height="24" VerticalAlignment="Top"/>
+
+        <ComboBox ItemsSource="{Binding Departments}" Text="{Binding Departments.NameDepartment}" 
+                  Margin="88,192,0,0" VerticalAlignment="Top" DisplayMemberPath="NameDepartment" />
+        <Label Content="Департамент" Margin="0,190,175,0" Height="24" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding Worker.Secrecy}" Content="Уровень секретности" HorizontalAlignment="Left" Margin="88,165,0,0" VerticalAlignment="Top" Width="212"/>
+
+
+    </Grid>
+</UserControl>
